@@ -3,6 +3,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 
 const app = express();
+const router = express.Router();
 
 // Підключення до MongoDB
 const mongoURI = 'mongodb+srv://evro78:T9luAEgqQSY4Hw8k@cluster0.4cg4u.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
@@ -28,10 +29,16 @@ const testSchema = new mongoose.Schema({
 
 const Test = mongoose.model('Test', testSchema);
 
-// Ендпоінт для отримання тестів
-app.get('/tests', (req, res) => {
-    res.json(tests);
-});
+// Отримати всі тести з бази даних
+router.get('/tests', async (req, res) => {
+    try {
+      const tests = await Test.find();  // Знайти всі тести
+      res.json(tests);  // Відправити тести у відповідь
+    } catch (err) {
+      console.error('Error fetching tests:', err);
+      res.status(500).json({ error: 'Error fetching tests' });
+    }
+  });
 
 // Роут для отримання тесту з бази даних
 app.get('/tests/:id', async (req, res) => {

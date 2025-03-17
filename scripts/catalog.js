@@ -19,14 +19,14 @@ async function loadTestList() {
             testItem.classList.add('test-item');
             testItem.onclick = function(){startTest(test.id)};
             testItem.innerHTML = `<a>
-                <h3 class="catalog-test-name">${test.title}</h3>
+                <h3 class="catalog-test-name">${test.name}</h3>
                 <p class="catalog-test-description">${test.description}</p>
                 <p class="catalog-test-count">Questions: ${numberQ}</p>
             `;
             catalog.appendChild(testItem);
         });
     } catch (error) {
-        console.error('Помилка при завантаженні тестів:', error);
+        console.error('Error loading tests:', error);
     }
 }
 
