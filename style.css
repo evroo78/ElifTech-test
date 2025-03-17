@@ -1,0 +1,184 @@
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+#catalog {
+    margin: 160px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    gap: 10px;
+}
+
+.test-item {
+    padding: 16px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    cursor: pointer;
+    width: 300px;
+    height: 160px;
+}
+
+.catalog-test-count{
+    color: #0080ff;
+    position: static;
+    bottom : 10px;
+}
+
+.catalog-test-name{
+    margin-top: 8px;
+}
+
+.catalog-test-description{
+    height: 5em;
+}
+
+
+form {
+    margin-bottom: 20px;
+}
+
+.question {
+    margin-bottom: 15px;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.line{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.column{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.numberQ{
+    margin: 4px;
+}
+
+.long-input{
+    flex-grow: 1;
+}
+.Q-wrap{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.remove{
+    cursor: pointer;
+}
+
+
+.line div{
+    /* border: solid 1px red; */
+    padding: 4px 8px;
+    margin: 0 4px;
+    width: fit-content;
+    align-self: center;
+
+}
+
+
+
+input, button, select {
+    padding: 8px;
+    margin: 4px 0;
+    display: block;
+}
+
+.question-block{
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+    font-size: 1em;
+}
+
+.numberQ p{
+    width: 2em;
+    height: 2em;
+    line-height: 1em;
+    border: solid 1px #0080ff;
+    border-radius: 100px;
+    text-align: center;
+    align-content: center;
+}
+
+.question-conteiner input, .question-conteiner label, .question-conteiner select{
+    display: block;
+    font-size: 1em;
+    color: #ff0000;
+}
+
+#title, label[for="title"]{
+    font-size: 1.5em;
+    border: 0px;
+    min-width: 110px;
+    align-self: center;
+}
+#title{
+    width: 100%;
+}
+
+.title-wrap{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+.floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 50%;
+    font-size: 36px;
+    text-align: center;
+    line-height: 60px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.floating-btn:hover {
+    background-color: #45a049;
+}

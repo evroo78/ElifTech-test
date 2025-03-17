@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Create Quiz</title>
+</head>
+<body>
+    <h1>Create Quiz</h1>
+    <form id="test-form">
+        <!-- Назва тесту -->
+        <div class="title-wrap">
+            <label for="title">Test title:</label>
+            <input type="text" id="title" required />
+        </div>
+        <!-- Блок для додавання питань -->
+        <div id="questions-container" placeholder="Input test title..."></div>
+        <button type="button" id="add-question-btn">Add question</button>
+        
+        <div id="save-conteiner">
+            <button type="submit">Save Quiz</button>
+        </div>
+    </form>
+    <script src="scripts/constructor.js"></script>
+</body>
+</html>
