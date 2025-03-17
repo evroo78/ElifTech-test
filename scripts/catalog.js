@@ -1,8 +1,9 @@
 const API_URL = 'http://localhost:3000/tests';
+const BASE_URL = 'https://eliftech-test-2zcs.onrender.com';
 
 async function loadTestList() {
     try {
-        const response = await fetch(API_URL);
+        const response = await fetch(`${BASE_URL}/tests`);
 
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
