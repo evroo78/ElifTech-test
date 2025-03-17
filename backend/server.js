@@ -6,10 +6,7 @@ const app = express();
 
 // Підключення до MongoDB
 const mongoURI = 'mongodb+srv://evro78:T9luAEgqQSY4Hw8k@cluster0.4cg4u.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
-mongoose.connect(mongoURI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
+mongoose.connect(mongoURI, {useUnifiedTopology: true})
 .then(() => console.log('MongoDB connected'))
 .catch(err => console.log('Error connecting to MongoDB:', err));
 
