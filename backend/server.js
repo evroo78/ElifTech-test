@@ -111,17 +111,21 @@ const tests =[
   ];
 
 // Ендпоінт для отримання тестів
-app.get('/tests/:id', (req, res) => {
-    const testId = req.params.id;
-    // Припустимо, що тести зберігаються в масиві
-    const test = tests.find(t => t.id == testId);
-    if (test) {
-        res.json(test);
-    } else {
-        res.status(404).send('Test not found');
-    }
+app.get('/tests', (req, res) => {
+    res.json(tests);
 });
 
+// Роут для отримання конкретного тесту за його id
+app.get('/tests/:id', (req, res) => {
+    const testId = req.params.id;
+    const test = tests.find(t => t.id == testId);
+
+    if (test) {
+        res.json(test); // Відправляємо знайдений тест
+    } else {
+        res.status(404).send('Test not found'); // Якщо тест не знайдений
+    }
+});
 
 // Запуск сервера
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
