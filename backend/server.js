@@ -30,7 +30,7 @@ const testSchema = new mongoose.Schema({
 const Test = mongoose.model('Test', testSchema);
 
 // Отримати всі тести з бази даних
-router.get('/tests', async (req, res) => {
+app.get('/tests', async (req, res) => {
     try {
       const tests = await Test.find();  // Знайти всі тести
       res.json(tests);  // Відправити тести у відповідь
