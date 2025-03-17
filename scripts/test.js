@@ -23,20 +23,20 @@ async function loadTest() {
 
         const form = document.getElementById('test-form');
         form.innerHTML = '';
-
         test.questions.forEach((question, index) => {
             const questionElement = document.createElement('div');
             questionElement.classList.add('question');
-
-            questionElement.innerHTML = `
+            if (typeof question.correct == 'string'){
+                questionElement.innerHTML = `
                 <p><strong>${index + 1}. ${question.text}</strong></p>
                 ${question.answers.map(answer => `
-                    <label>
-                        <input type="radio" name="q${index}" value="${answer}">
-                        ${answer}
+                    <label class="line">
+                        <div><input type="radio" name="q${index}" value="${answer}"></div>
+                        <div>${answer}</div>
                     </label>
                 `).join('')}
             `;
+            }
 
             form.appendChild(questionElement);
         });

@@ -45,16 +45,12 @@ const tests =[
             "4",
             "5"
           ],
-          "correct": "4"
+          "correct": ["4","5"]
         },
         {
           "text": "Скільки буде 3 * 3?",
-          "answers": [
-            "6",
-            "9",
-            "12"
-          ],
-          "correct": "9"
+          "answers": [],
+          "correct": []
         }
       ]
     },
