@@ -111,9 +111,17 @@ const tests =[
   ];
 
 // Ендпоінт для отримання тестів
-app.get('/tests', (req, res) => {
-    res.json(tests);
+app.get('/tests/:id', (req, res) => {
+    const testId = req.params.id;
+    // Припустимо, що тести зберігаються в масиві
+    const test = tests.find(t => t.id == testId);
+    if (test) {
+        res.json(test);
+    } else {
+        res.status(404).send('Test not found');
+    }
 });
+
 
 // Запуск сервера
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
