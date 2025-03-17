@@ -42,7 +42,7 @@ app.get('/tests/:id', async (req, res) => {
             res.status(404).send('Test not found');
         }
     } catch (error) {
-        res.status(500).send('Помилка сервера');
+        res.status(500).send('Server error');
     }
 });
 
