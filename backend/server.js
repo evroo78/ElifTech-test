@@ -7,10 +7,108 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-const tests = [
-    { id: 1, name: 'Тест 1' },
-    { id: 2, name: 'Тест 2' }
-];
+const tests =[
+    {
+      "id": "1",
+      "title": "Quiz 1",
+      "description": "Description Description Description Description Description Description Description Description Description Description",
+      "questions": [
+        {
+          "text": "Скільки буде 2 + 2?",
+          "answers": [
+            "3",
+            "4",
+            "5"
+          ],
+          "correct": "4"
+        },
+        {
+          "text": "Скільки буде 3 * 3?",
+          "answers": [
+            "6",
+            "9",
+            "12"
+          ],
+          "correct": "9"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Quiz 2",
+      "description": "Description",
+      "questions": [
+        {
+          "text": "Скільки буде 2 + 2?",
+          "answers": [
+            "3",
+            "4",
+            "5"
+          ],
+          "correct": "4"
+        },
+        {
+          "text": "Скільки буде 3 * 3?",
+          "answers": [
+            "6",
+            "9",
+            "12"
+          ],
+          "correct": "9"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Quiz 3",
+      "description": "Description",
+      "questions": [
+        {
+          "text": "Скільки буде 2 + 2?",
+          "answers": [
+            "3",
+            "4",
+            "5"
+          ],
+          "correct": "4"
+        },
+        {
+          "text": "Скільки буде 3 * 3?",
+          "answers": [
+            "6",
+            "9",
+            "12"
+          ],
+          "correct": "9"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Quiz 14",
+      "description": "Description",
+      "questions": [
+        {
+          "text": "Скільки буде 2 + 2?",
+          "answers": [
+            "3",
+            "4",
+            "5"
+          ],
+          "correct": "4"
+        },
+        {
+          "text": "Скільки буде 3 * 3?",
+          "answers": [
+            "6",
+            "9",
+            "12"
+          ],
+          "correct": "9"
+        }
+      ]
+    }
+  ];
 
 // Ендпоінт для отримання тестів
 app.get('/tests', (req, res) => {
